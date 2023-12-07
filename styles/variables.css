@@ -1,1 +1,69 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  /* ✦ Шрифты ✦ */
+  --accent-font: 'Press Start 2P';
+  --main-font: 'Inter';
+
+  /* ✦ Размеры текста ✦ */
+  --accent-font-size: 14px;
+  --main-font-size: 18px;
+
+  /* ✦ Все clamp функции с пояснениями ✦ */
+
+  /* ✦ Размеры блока 375px => 1440px ✦ */
+  --content-size: clamp(23.438rem, 0rem + 100vw, 43.75rem);
+
+  /* ✦ Внутренние отступы в шапке block-start: 120px => 136px,
+   block-end: 25px статично ✦ */
+  --inner-padding: clamp(7.5rem, 6.332rem + 4.984vw, 8.5rem) 25px;
+
+  /* ✦ Размеры текста логотипа в хедере 49px => 65px ✦ */
+  --header-logo-font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
+
+  /* ✦ Размеры заголовка в хедере 14px => 23px ✦ */
+  --title-font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
+
+  /* ✦ Правый отступ у лейбла 10px => 25px ✦ */
+  --label-inset-right: clamp(0.625rem, 0.295rem + 1.408vw, 1.563rem);
+
+  /* ✦ Толщина шрифта */
+  --main-font-weight: 400;
+  --accent-font-weight: 700;
+
+  /* ✦ Цвета ✦ */
+  --bg-color: #fff;
+  --main-color: #000;
+  /* Для кнопок, цвет текста которых меняется
+  при ховере */
+  --button-text-color: var(--bg-color, #fff);
+  /* Для иконки сердечка */
+  --red-color: red;
+  /* ✦ Градиенты ✦ */
+  --gradient-main-color: #d3d3d3;
+  --gradient-accent-color-start: #e7e7e7;
+  --gradient-accent-color-end: #1a1a1a;
+
+  /* ✦ Фон ✦ */
+
+  /* Создает эффект сетки с помощью двух повторяющихся градиентов,
+   один вертикальный, второй горизонтальный, третий - плавный
+   переход от одного цвета к другому */
+
+  --bg-image: repeating-linear-gradient(
+      /* Вертикальный */ 90deg,
+      var(--gradient-main-color) 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(
+      /* Горизонтальный */ 0deg,
+      var(--gradient-main-color) 0 2px,
+      transparent 2px 4px
+    ),
+    linear-gradient(
+      /* Вертикальный цветной */ 180deg,
+      var(--gradient-accent-color-start) 0%,
+      var(--gradient-accent-color-start) 0.01%,
+      var(--gradient-accent-color-end) 100%
+    );
+}
