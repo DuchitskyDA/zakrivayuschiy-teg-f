@@ -33,7 +33,8 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
   font-variation-settings: 'wght' var(--main-font-weight, 400);
-  inline-size: var(--content-size);
+  /* inline-size: var(--content-size); */
+  max-inline-size: 700px;
 }
 
 .logo {
