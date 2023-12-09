@@ -147,13 +147,32 @@
       </article>
     </main>
     <footer class="footer">
-      <button class="button footer__button">
+      <button
+        class="button footer__button"
+        type="button"
+        onclick="window.dialog.showModal()"
+      >
         <svg class="floppy-icon">
           <use class="floppy-icon__item" href="./svg/floppy.svg#floppy"></use>
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
     </footer>
+    <dialog class="dialog" id="dialog">
+      <div class="dialog__title">
+        <svg class="floppy-icon">
+          <use class="floppy-icon__item" href="./svg/floppy.svg#floppy"></use>
+        </svg>
+        <span class="dialog__title-text">Вставьте дискету, чтобы продолжить</span>
+      </div>
+      <button
+        class="dialog__button button"
+        type="button"
+        onclick="window.dialog.close()"
+      >
+        <span class="dialog__button-text">ок</span>
+      </button>
+    </dialog>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
