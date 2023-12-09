@@ -12,7 +12,7 @@
   /* ✦ Все clamp функции с пояснениями ✦ */
 
   /* ✦ Размеры блока 320px => 700px ✦ */
-  --content-size: clamp(20rem, 0rem + 100vw, 43.75rem);
+  --content-size: clamp(19.75rem, -0.25rem + 100vw, 43.5rem);
 
   /* ✦ Внутренние отступы в шапке block-start: 120px => 136px,
    block-end: 25px статично ✦ */
