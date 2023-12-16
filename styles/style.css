@@ -52,6 +52,7 @@
   background-color: var(--bg-color);
   transition: 0.3s ease;
   cursor: pointer;
+  appearance: none;
 }
 
 /* Скидываем стандартные обводки у всех кликабельных элементов
@@ -494,6 +495,6 @@
   filter: saturate(30%);
 }
 
-.filter-sepia {
-  filter: sepia(60%);
+.filter-multiply {
+  filter: blur(3px) contrast(200%);
 }
