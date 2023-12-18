@@ -19,10 +19,10 @@
   --inner-padding: clamp(7.5rem, 6.332rem + 4.984vw, 8.5rem) 25px;
 
   /* ✦ Размеры текста логотипа в хедере 49px => 65px ✦ */
-  --header-logo-font-size: clamp(3.063rem, 2.22rem + 4.211vw, 4.063rem);
+  --header-logo-font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
 
   /* ✦ Размеры заголовка в хедере 14px => 23px ✦ */
-  --title-font-size: clamp(0.875rem, 0.401rem + 2.368vw, 1.438rem);
+  --title-font-size: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
 
   /* ✦ Правый отступ у лейбла 10px => 25px ✦ */
   --label-inset-right: clamp(0.625rem, 0.295rem + 1.408vw, 1.563rem);

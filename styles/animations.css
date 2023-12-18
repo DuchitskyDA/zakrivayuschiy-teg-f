@@ -42,3 +42,76 @@
     opacity: 1;
   }
 }
+
+/* ✦ Стили для сердечка ✦ */
+
+/* Дефолтное состояние, видно только контур */
+.core,
+.main-body {
+  fill: var(--bg-color);
+}
+
+.core {
+  transition: fill 0.3s linear 0.03s;
+}
+
+.main-body {
+  transition: fill 0.3s linear;
+}
+
+.contour {
+  fill: var(--main-color);
+  transition: fill 0.1s linear;
+}
+
+.sparks {
+  opacity: 0;
+  fill: var(--red-color);
+}
+
+@media (hover: hover) {
+  .card__icon-button:hover .core {
+    fill: var(--main-color);
+    transition: fill 0.3s linear;
+  }
+
+  .card__icon-button:hover .main-body {
+    fill: var(--main-color);
+    transition: fill 0.3s linear 0.05s;
+  }
+}
+
+.card__icon-button:active .core {
+  fill: var(--red-color);
+  transition: fill 0.3s linear;
+}
+
+.card__icon-button:active .main-body {
+  fill: var(--red-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+/* Стили для нажатого сердечка */
+.like-icon.is-liked .core {
+  fill: var(--red-color);
+  transition: fill 0.3s linear;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--red-color);
+  transition: fill 0.3s linear 0.05s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--red-color);
+  transition: fill 0.3s linear 0.06s;
+}
+
+.like-icon.is-liked .heart {
+  transform-origin: center;
+  animation: heart-scale 0.3s ease-in 0.1s 1 alternate;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks-appearance 0.3s ease-in 0.3s alternate;
+}
