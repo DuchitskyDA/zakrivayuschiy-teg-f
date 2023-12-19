@@ -55,6 +55,7 @@
   transition: 0.3s ease;
   cursor: pointer;
   appearance: none;
+  overflow: hidden;
 }
 
 /* Скидываем стандартные обводки у всех кликабельных элементов
@@ -84,7 +85,7 @@
   inset: 0;
   background-color: var(--main-color);
   transition: 0.5s ease-in-out;
-  transform: scaleX(0);
+  transform: translateX(-101%);
   transform-origin: left;
 }
 
@@ -102,7 +103,7 @@
   /* Выдвигаем шторку, которую описали в .button::before */
 
   .button:hover::before {
-    transform: scaleX(1);
+    transform: translateX(0);
   }
 }
 
@@ -310,7 +311,7 @@
 
 .card__like-button {
   border: 2px solid var(--main-color);
-  padding: 10px 17px;
+  padding-block: 12px;
   font-size: var(--accent-font-size);
   line-height: 0.9;
   background-color: var(--bg-color);
@@ -319,6 +320,7 @@
 }
 
 .like-icon {
+  vertical-align: middle;
   cursor: pointer;
 }
 
